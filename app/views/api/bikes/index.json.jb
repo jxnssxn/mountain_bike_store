@@ -1,1 +1,14 @@
-@bikes
+@bikes.map do |bike|
+  {
+    id: bike.id,
+    name: bike.name,
+    price: bike.price,
+    description: bike.description
+  }
+end
+# {
+#   name: "Giant Trance Advanced pro 29",
+#   price: 5200, 
+#   image_url: "https://images.giant-bicycles.com/b_white,c_pad,h_650,q_80/sptpqtcbccjtghlqjoty/MY20TranceADPRO291_ColorA.jpg",
+#   description: "The latest iteration of this legendary trail bike marks a huge step forward, offering a true advantage in all-round trail performance."
+# }
