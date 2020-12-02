@@ -6,16 +6,22 @@ class Api::BikesController < ApplicationController
     render 'index.json.jb'
   end
 
-  def show
+  def s
     @bike = Bike.find_by(id: params[:id])
     render "show.json.jb"
   end
 
   def create
-    # message: @message
-    # @bikes = Bike.new()
-    # @bike.save
-    render "create.json.jb"
+
+    @bike = Bike.new(
+      id: params[:id],
+      name: params[:name],
+      price: params[:price],
+      image_url: params[:image_url],
+      description: params[:description]
+    )
+    @bike.save
+    render "show.json.jb"
   end
 
 

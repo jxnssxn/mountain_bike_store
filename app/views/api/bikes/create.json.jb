@@ -1,3 +1,7 @@
 {
-create_action: "Canyon Spectral CFR 9.0"
+  id: @bike.id,
+  name:@bike.name,
+  price: @bike.price,
+  image_url: @bike.image_url,
+  description: @bike.description
 }
