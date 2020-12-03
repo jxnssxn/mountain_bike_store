@@ -26,6 +26,7 @@ class Api::BikesController < ApplicationController
 
   def update
     @bike = Bike.find_by(id: params[:id])
+    @bike.id = params[:id]
     @bike.name = params[:name]
     @bike.price = params[:price]
     @bike.image_url = params[:image_url]
@@ -34,6 +35,11 @@ class Api::BikesController < ApplicationController
     render 'show.json.jb'
   end
   
+  def destroy
+    @bike = Bike.find_by(id: params[:id])
+    @bike.destroy
+    render json: {message: "Bike has been removed"}
+  end
 
 
 end

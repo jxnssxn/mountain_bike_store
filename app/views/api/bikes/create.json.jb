@@ -1,7 +1,0 @@
-{
-  id: @bike.id,
-  name:@bike.name,
-  price: @bike.price,
-  image_url: @bike.image_url,
-  description: @bike.description
-}
